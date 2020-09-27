@@ -18,8 +18,8 @@ pip install pystack-manager
 from pystack import Stack
 
 stack = Stack() #create new stack
-stack.add(5) #add element in stack
-print(stack.get()) #return and delete last element in stack
+stack.push(5) #add element in stack
+print(stack.pop()) #return and delete last element in stack
 print(stack.last()) #return and don't delete last element in stack
 ```
 #### Particular stack
@@ -63,7 +63,7 @@ Several methods exist to add element to a stack.
 Add one element:
 
 ```python
-stack.add(value) # add items to a stack
+stack.push(value) # add items to a stack
 ```
 *value* can a stack, an object, an integer, a float or other.
 
@@ -86,7 +86,7 @@ stack = first_stack + second_stack #create new stack with elements of first_stac
 Two methods exist to get the last element of the stack.
 
 ```python
-value = stack.get() #return and delete the last element of the stack
+value = stack.pop() #return and delete the last element of the stack
 value = stack.last() #return and doesn't delete the last element of the stack
 ```
 If *stack* is empty, an error is generated.
