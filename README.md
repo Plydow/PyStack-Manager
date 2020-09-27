@@ -113,13 +113,15 @@ else:
 ```
 
 ## Support
-
 if you encounter any bugs, you can report them by email, by attaching the error message and the program.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+## Source Code
+The code source can be found [here](https://github.com/Plydow/PyStack-Manager)
 
 ## License
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
