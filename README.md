@@ -1,6 +1,6 @@
 # PyStack
 
-PyStack is a Python library for use stack.
+PyStack is a Python library for use stack. Stacks are a type of list-like variable but, with additional constraints [view more](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)).
 
 ## Installation
 
