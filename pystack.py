@@ -7,8 +7,8 @@ Class:
     Stack
 
 Functions:
-    add(value)
-    get() -> value
+    push(value)
+    pop() -> value
     last() -> calue
     get_size() -> int
     copy() -> Stack
@@ -67,7 +67,7 @@ class Stack:
         self.LIMITE = limite
         self.TYPED = typed
 
-    def add(self, value):
+    def push(self, value):
         """
         Add element at the end of the stack
 
@@ -91,7 +91,7 @@ class Stack:
 
         self.__stack.append(value)
 
-    def get(self):
+    def pop(self):
         """
         Return and remove the last element in the stack
 
@@ -177,13 +177,13 @@ class Stack:
             stack_origin_copy = stack_origin.copy()
             stack_size = stack_origin_copy.get_size()
 
-            temp_list = [stack_origin_copy.get() for _ in range(0, stack_size)]
+            temp_list = [stack_origin_copy.pop() for _ in range(0, stack_size)]
         else:
             temp_list = stack_origin[::-1]
 
         for element in temp_list[::-1]:
             try:
-                self.add(element)
+                self.push(element)
             except StackOverflowError:
                 pass
             except Exception as error:
@@ -272,7 +272,7 @@ class Stack:
     def __eq__(self, other):
         other = other.copy()
         other_size = other.get_size()
-        other_element = [other.get() for _ in range(0, other_size)][::-1]
+        other_element = [other.pop() for _ in range(0, other_size)][::-1]
 
         if other_element == self.__stack:
             return True
