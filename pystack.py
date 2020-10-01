@@ -13,9 +13,13 @@ Functions:
     get_size() -> int
     copy() -> Stack
     transfer(stack)
+    reverse()
+    split(index) -> Stack
+    clear()
     is_limited() -> boolean
     is_typed() -> boolean
     is_full() -> boolean
+    is_empty() -> boolean
     get_capacity() -> int
 
 Raises:
@@ -222,6 +226,12 @@ class Stack:
 
         return new_stack
 
+    def clear(self):
+        """
+        Clear all element in stack
+        """
+        self.__stack = []
+
     def is_limited(self):
         """
         Return if the stack is at limited capacity
@@ -232,6 +242,15 @@ class Stack:
         if self.get_capacity() == -1:
             return False
         return True
+
+    def is_empty(self):
+        """
+        Return if the stack is empty
+
+        Returns:
+            boolean: if stack is empty
+        """
+        return self.get_size()==0
 
     def is_typed(self):
         """
