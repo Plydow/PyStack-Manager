@@ -211,7 +211,7 @@ class Stack:
         Raise:
             ValueError: if index is not a int or float and not between 0 and stack size
         """
-        if isinstance(index, (int, float)) and 0 <= index <= self.get_size():
+        if not isinstance(index, (int, float)) and 0 <= index <= self.get_size():
             raise ValueError(
                 "Value of split must be a integer or float and be between 0 and the stack size"
             )
