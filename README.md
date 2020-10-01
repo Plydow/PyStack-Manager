@@ -115,7 +115,7 @@ else:
 ###### Other modifications
 
 Reverse the stack:
-```python:
+```python
 s = Stack()
 s.transfer([5, 8, 9])
 print(s) # [5, 8, 9]
