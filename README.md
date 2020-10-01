@@ -112,6 +112,26 @@ else:
     #False statement
 ```
 
+###### Other modifications
+
+Reverse the stack:
+```python:
+s = Stack()
+s.transfer([5, 8, 9])
+print(s) # [5, 8, 9]
+s.reverse()
+print(s) # [9, 8, 5]
+```
+
+Split the stack:
+```python
+s = Stack()
+s.transfer([8, 6, 7, 2])
+
+a = s.split(2)
+print(s, a) # [8, 6] [7, 2]
+```
+
 ## Support
 if you encounter any bugs, you can report them by email, by attaching the error message and the program.
 

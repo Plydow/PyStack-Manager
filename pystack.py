@@ -149,7 +149,7 @@ class Stack:
         stack_copy = Stack(limite=self.get_capacity(), typed=self.get_type())
 
         for element in self.__stack:
-            stack_copy.add(element)
+            stack_copy.push(element)
 
         return stack_copy
 
@@ -188,6 +188,39 @@ class Stack:
                 pass
             except Exception as error:
                 raise error
+
+    def reverse(self):
+        """
+        Reverse the stack.
+        """
+        self.__stack = self.__stack[::-1]
+
+    def split(self, index):
+        """
+        Split the stack in two stacks around the value of index.
+
+        Split the stack in two stacks, the first part (0->index), index excluded,
+        rest in this stack, and the rest goes in a new stack.
+
+        Args:
+            index (int): value of split
+
+        Returns:
+            new_stack (Stack): the stack container values between index and the end
+
+        Raise:
+            ValueError: if index is not a int or float and not between 0 and stack size
+        """
+        if isinstance(index, (int, float)) and 0 <= index <= self.get_size():
+            raise ValueError(
+                "Value of split must be a integer or float and be between 0 and the stack size"
+            )
+
+        new_stack = Stack(limite=self.get_capacity(), typed=self.get_type())
+        new_stack.transfer(self.__stack[:index])
+        self.__stack = self.__stack[index:]
+
+        return new_stack
 
     def is_limited(self):
         """
